@@ -1,0 +1,57 @@
+<o!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .col-md-12 {
+            width: 42%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+    </style>
+</head>
+<body>
+    <div class="col-md-12">
+        <img src="img/giphy.gif" class="img-responsive" alt="Imagen de inicio">
+        <div class="col-md-10">
+            <h1 class="bg-dark text-white">Welcome to my CRUD</h1>
+            <p class="bg-dark text-white">Create, Rename, Update, Delete</p> 
+        </div>
+    </div>
+   <div class="container mt-5">
+        <form onsubmit="event.preventDefault()">
+            <div class="form-group">
+                <label for="marca">Marca</label>
+
+                <input type="text" class="form-control" id="marca" placeholder="Marca">
+            </div>
+            <div class="form-group">
+                <label for="modelo">Modelo</label>
+                <input type="text" class="form-control" id="modelo" placeholder="Modelo">
+            </div>
+            <button onclick="addCar();" type="submit" class="btn btn-primary">Submit</button>
+            <button onclick="saveCarEdited();" type="submit" class="btn btn-secondary">Editar</button>
+        </form>
+        
+        <div>
+            <table id="user-table" class="table">
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th></th> 
+                    </tr>
+                </thead>
+                <tbody id="table-users-body">
+            
+                </tbody>
+            </table>
+        </div>
+   </div>
+   <script src="./crud-cars.js"></script>
+</body>
+</html>
